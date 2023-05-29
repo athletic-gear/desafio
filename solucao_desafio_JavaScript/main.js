@@ -1,4 +1,4 @@
-// FEITO PRO GABRIEL SIRIANI - 29/05/2023 - Desafio Athletic Gear
+// FEITO POR GABRIEL SIRIANI - 29/05/2023 - Desafio Athletic Gear
 // CONTATO: gabrielsiriani19@gmail.com
 // Portofólio: https://gabrielsiriani.com/
 
@@ -73,6 +73,6 @@ inputAdicionar.addEventListener("click", function () {
 // https://pt.stackoverflow.com/questions/316987/validar-for%C3%A7a-da-senha-no-front-end
 
 
-// FEITO PRO GABRIEL SIRIANI - 29/05/2023
+// FEITO POR GABRIEL SIRIANI - 29/05/2023
 // CONTATO: gabrielsiriani19@gmail.com
 // Portofólio: https://gabrielsiriani.com/
