@@ -20,11 +20,11 @@ int main()
         {
             if(isupper(Elemento))
                 QuantidadeMaiusculo++;
-            if(islower(Elemento))
+            else if(islower(Elemento))
                 QuantidadeMinusculo++;
-            if(isdigit(Elemento))
+            else if(isdigit(Elemento))
                 QuantidadeNumero++;
-            if(Elemento != isdigit(Elemento) && Elemento != isalpha(Elemento))
+            else
                 QuantidadeCaractere++;
         }
 
