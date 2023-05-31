@@ -1,97 +1,70 @@
-# Requisitos
+## Desafio Técnico: Athletic Gear
 
-**Utilizar qualquer linguagem de programação.**
+<img src="https://i.imgur.com/bhNuuem.gif" alt="exemplo imagem" width="35%">
 
-A ideia é validar a lógica e principalmente a forma como resolveu o problema.
 
-Vamos querer ouvir como aprendeu, como descobriu e o porquê escolheu fazer assim no seu código.
+### Solução:
+  A princípio queria propor uma solução em Dart/Flutter com mecanismos que não sabia implementar, são elas:
+ -  **Gerência de Estado:** **Nativa** (ValueNotifier para variáveis e ValueListenebles p/ Widgets), apesar de já ter utilizado esta reatividade em outros contextos, me parecia muito boa para validar campos enquanto eles são digitados;
+ -  **Validador de Senhas:** **Regular Expressions**. Como a validação tradicional com condicionais era muito trivial, queria explorar este padrão de texto nesta solução.
 
-Não é necessário conhecer todos recursos para resolver o desafio, a proposta é "correr atrás" para aprender e então resolver.
+>   **Etapa 1 - Reatividade:** Fiz uma campo de formulário tradicional e aprendi a utilizar a reatividade com ValueNofier para formulário, a parte visual ficou assim:
 
-Sugerimos procurar no Google, Stack Overflow, YouTube, grupos técnicos, amigos, colegas de sala, professor, o que preferir -- _lembra de contar pra gente depois hein!_
 
-Não tem prazo específico para terminar, quando acabar nos envie.
 
-Lembre-se que esse prazo também será levado em consideração, não fique com pressa para terminar rápido se estiver errado ou incompleto, só que também não gaste _um ano_ para terminar 😉
+<img src="https://i.imgur.com/50ONvsY.gif" alt="exemplo imagem" width="30%">
 
----
+>   **Etapa 2 - Array de Senhas:** Fiz um segundo Formulário para receber múltiplas senhas, daqui em diante era só incrementar o algoritmo de validação:
 
-## Problema a ser resolvido
 
-Considerando um array de senhas em string, que pode ser uma constante no código, imprimir na tela somente as que forem senhas fortes.
+<img src="https://i.imgur.com/QrNKudT.png" alt="exemplo imagem" width="40%">
 
-Para uma senha ser forte, ela deve ter:
+>   **Etapa 3 - Algorimo de Validação:** Como me propus a solucionar com Regex, pesquisei alguns padrões (fontes em código) e criei um algoritmo simples que retorna um bool:
 
-- no mínimo 7 caracteres
-- pelo menos uma letra maiúscula
-- pelo menos uma letra minúscula
-- \+ _E se for tranquilo para você, verifica também se tem um caracter especial (dentro dos que você preferir!) 🙂_
+```
+bool isValidPassword(String password) {
+  var uppercaseRegex = RegExp(r'.*[A-Z].*');
+  var lowercaseRegex = RegExp(r'.*[a-z].*');
+  var numberRegex = RegExp(r'.*[0-9].*');
+  var specialCharRegex = RegExp(r'.*[!@#$&*-].*');
 
----
+  // MinLenght Validator
+  if (password.length < 7) {
+    return false;
+  }
 
-### Extra / Bônus
+  bool isValid = uppercaseRegex.hasMatch(password) &&
+      lowercaseRegex.hasMatch(password) &&
+      numberRegex.hasMatch(password) &&
+      specialCharRegex.hasMatch(password);
 
-Você ganhará pontos extras se utilizar um repositório Git e enviar sua solução no [GitHub](https://github.com/).
+  return isValid;
+}
 
-_(melhor ainda se fizer um fork desse 🤩)_.
+  //Pesquisas:
+  //  How to use Regex Dart: https://stackoverflow.com/questions/49757486/how-to-use-regex-in-dart
+  //  Upper/Lower Case Pattern: https://stackoverflow.com/questions/1559751/regex-to-make-sure-that-the-string-contains-at-least-one-lower-case-char-upper
+  //  Charactere Especial Pattern: https://stackoverflow.com/questions/5142103/regex-to-validate-password-strength
+  //  Ferramenta de teste: https://rubular.com/r/UAwoaPM0Ji
+``` 
 
-Se você não conhecer o [Git](https://www.google.com/search?q=git), não tem problema nenhum. Pode aprender e nos contar como aprendeu!
+>   **Resultado:** Explorei os dois objetos de estudo que me propus e apresentei a solução do primeiro gif da documentação:
 
-Não precisa virar um especialista, apenas o básico! Só que iremos querer saber como você aprendeu
+<img src="https://i.imgur.com/bhNuuem.gif" alt="exemplo imagem" width="30%">
 
-Queremos avaliar sua capacidade de aprender e de buscar ajuda.
 
-Tem muito material pronto e gratuito sobre Git e GitHub, use a internet a seu favor.
+## 🚀 Run Athletic Gear Solution
 
-De qualquer maneira, isso será útil para toda sua vida enquanto profissional de TI! 👍
+Dentro da pasta, digite:
 
----
+Linux e macOS:
 
-#### Exemplo
+```
+flutter run
+```
 
-Considerando um array com as strings:
+Windows:
 
-- #forTe1
-- senhafraca
-- Qu@s1
-- Voce@Consegue!2023
-
-Será impresso na tela apenas duas linhas:
-
----
-\#forTe1
-
-Voce@Consegue!2023
-
----
-
-Já que são as únicas que atendem os requisitos para uma senha forte.
-
-- **#forTe1**
-  - ✅ >= 7 caracteres (7)
-  - ✅ Tem letra maiúscula (T)
-  - ✅ Tem letra minúscula (fore)
-  - ✅ Tem número (1)
-  - ✅ _E tem caracter especial, caso você consiga validar (#)_
-
-- senhafraca
-
-  - ✅ >= 7 caracteres (10)
-  - ❌ Tem letra maiúscula
-  - ✅ Tem letra minúscula (senhafraca)
-  - ❌ Tem número
-
-- Qu@s1
-
-  - ❌ >= 7 caracteres (5)
-  - ✅ Tem letra maiúscula (Q)
-  - ✅ Tem letra minúscula (us)
-  - ✅ Tem número (1)
-  - ✅ _E tem caracter especial, caso você consiga validar (@)_
-
-- **Voce@Consegue!2023**
-  - ✅ >= 7 caracteres (18)
-  - ✅ Tem letra maiúscula (VC)
-  - ✅ Tem letra minúscula (oceonsegue)
-  - ✅ Tem número (2023)
-  - ✅ _E tem caracter especial, caso você consiga validar (@!)_
+```
+flutter run
+```
