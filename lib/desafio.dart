@@ -1,4 +1,4 @@
-import 'package:desafio/controller/password_controller.dart';
+import 'package:desafio/src/controller/password_controller.dart';
 import 'package:desafio/src/model/password_model.dart';
 
 void validPasswords() {
