@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    background-color: gray;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    } 
+    
+.main_div{
+    background-image: linear-gradient(white, rgb(216, 216, 216));
+    position: absolute;
+    width: 27em;
+    min-height: 27em;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    border: 2px solid rgb(87, 87, 87);
+
+
+}
+
+.main_div .title{
+    color: green;
+}
+
+.main_div h2, h5{
+    font-size: 20px;
+}
+
+
+.main_div h4{
+    word-wrap: break-word;
+    width: 26em; 
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.validate p{
+    font-size: 16px;
+    color: green;
+}
