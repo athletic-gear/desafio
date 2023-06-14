@@ -1,97 +1,27 @@
-# Requisitos
 
-**Utilizar qualquer linguagem de programação.**
+Agora, se quiser escrever aqui no readme sobre sua solução... 
 
-A ideia é validar a lógica e principalmente a forma como resolveu o problema.
+# **Gabriel Siriani - Validador de Senhas**
 
-Vamos querer ouvir como aprendeu, como descobriu e o porquê escolheu fazer assim no seu código.
+Este é um código em JavaScript que implementa o validador de senhas. Ele verifica se as senha atendem os critérios determinados e exibe os resultados no console e visualmente no DOM do HTML.
 
-Não é necessário conhecer todos recursos para resolver o desafio, a proposta é "correr atrás" para aprender e então resolver.
+# **Funcionamento:**
 
-Sugerimos procurar no Google, Stack Overflow, YouTube, grupos técnicos, amigos, colegas de sala, professor, o que preferir -- _lembra de contar pra gente depois hein!_
+- O código possui um array de senhas com valores pré-definidos.
+- Possui as variáveis **containerFortes** e **containerFracas** que referenciam as IDs de divs no HTML.
+- Existe uma função chamada validarSenha que recebe uma senha como parâmetro e realiza a validação.
+   A função **validarSenha** verifica se a senha atende aos seguintes critérios:
+  - Possui no mínimo 6 caracteres.
+  - Contém pelo menos uma letra maiúscula.
+  - Contém pelo menos uma letra minúscula.
+  - Contém pelo menos um número.
+  - Contém pelo menos um caractere especial.
+- Dependendo do resultado da validação, a função exibe a senha no console e no DOM, indicando se é uma senha forte ou fraca.
+- Há tambem a funcionalidade de adicionar novas senhas ao mesmo array pré-definido.
+- Através de uma input, é possível adicionar uma nova senha no array. Após a senha ser adicionado, ela passa pela função **validarSenha** e é exibida no console e no DOM.
 
-Não tem prazo específico para terminar, quando acabar nos envie.
-
-Lembre-se que esse prazo também será levado em consideração, não fique com pressa para terminar rápido se estiver errado ou incompleto, só que também não gaste _um ano_ para terminar 😉
-
----
-
-## Problema a ser resolvido
-
-Considerando um array de senhas em string, que pode ser uma constante no código, imprimir na tela somente as que forem senhas fortes.
-
-Para uma senha ser forte, ela deve ter:
-
-- no mínimo 7 caracteres
-- pelo menos uma letra maiúscula
-- pelo menos uma letra minúscula
-- \+ _E se for tranquilo para você, verifica também se tem um caracter especial (dentro dos que você preferir!) 🙂_
-
----
-
-### Extra / Bônus
-
-Você ganhará pontos extras se utilizar um repositório Git e enviar sua solução no [GitHub](https://github.com/).
-
-_(melhor ainda se fizer um fork desse 🤩)_.
-
-Se você não conhecer o [Git](https://www.google.com/search?q=git), não tem problema nenhum. Pode aprender e nos contar como aprendeu!
-
-Não precisa virar um especialista, apenas o básico! Só que iremos querer saber como você aprendeu
-
-Queremos avaliar sua capacidade de aprender e de buscar ajuda.
-
-Tem muito material pronto e gratuito sobre Git e GitHub, use a internet a seu favor.
-
-De qualquer maneira, isso será útil para toda sua vida enquanto profissional de TI! 👍
-
----
-
-#### Exemplo
-
-Considerando um array com as strings:
-
-- #forTe1
-- senhafraca
-- Qu@s1
-- Voce@Consegue!2023
-
-Será impresso na tela apenas duas linhas:
-
----
-\#forTe1
-
-Voce@Consegue!2023
-
----
-
-Já que são as únicas que atendem os requisitos para uma senha forte.
-
-- **#forTe1**
-  - ✅ >= 7 caracteres (7)
-  - ✅ Tem letra maiúscula (T)
-  - ✅ Tem letra minúscula (fore)
-  - ✅ Tem número (1)
-  - ✅ _E tem caracter especial, caso você consiga validar (#)_
-
-- senhafraca
-
-  - ✅ >= 7 caracteres (10)
-  - ❌ Tem letra maiúscula
-  - ✅ Tem letra minúscula (senhafraca)
-  - ❌ Tem número
-
-- Qu@s1
-
-  - ❌ >= 7 caracteres (5)
-  - ✅ Tem letra maiúscula (Q)
-  - ✅ Tem letra minúscula (us)
-  - ✅ Tem número (1)
-  - ✅ _E tem caracter especial, caso você consiga validar (@)_
-
-- **Voce@Consegue!2023**
-  - ✅ >= 7 caracteres (18)
-  - ✅ Tem letra maiúscula (VC)
-  - ✅ Tem letra minúscula (oceonsegue)
-  - ✅ Tem número (2023)
-  - ✅ _E tem caracter especial, caso você consiga validar (@!)_
+# **Autor:**
+Gabriel Siriani no dia 29/05/2023.
+- Contato: gabrielsiriani19@gmail.com
+- Portfólio: https://gabrielsiriani.com/
+# 🤯
