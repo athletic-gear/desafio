@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:mobx/mobx.dart';
 part 'password_controller.g.dart';
 
+// ignore: library_private_types_in_public_api
 class PasswordController = _PasswordStore with _$PasswordController;
 
 abstract class _PasswordStore with Store {
