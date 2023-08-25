@@ -17,7 +17,7 @@ class AthleticGear extends StatelessWidget {
         title: 'Athletic Gear',
         theme: AppTheme.theme,
         debugShowCheckedModeBanner: false,
-        home: HomePage(),
+        home: const HomePage(),
       ),
     );
   }
