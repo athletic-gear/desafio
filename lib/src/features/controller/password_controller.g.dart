@@ -25,20 +25,20 @@ mixin _$PasswordController on _PasswordStore, Store {
     });
   }
 
-  late final _$isPasswordEightCharacteresAtom =
-      Atom(name: '_PasswordStore.isPasswordEightCharacteres', context: context);
+  late final _$isPasswordSevenCharacteresAtom =
+      Atom(name: '_PasswordStore.isPasswordSevenCharacteres', context: context);
 
   @override
-  bool get isPasswordEightCharacteres {
-    _$isPasswordEightCharacteresAtom.reportRead();
-    return super.isPasswordEightCharacteres;
+  bool get isPasswordSevenCharacteres {
+    _$isPasswordSevenCharacteresAtom.reportRead();
+    return super.isPasswordSevenCharacteres;
   }
 
   @override
-  set isPasswordEightCharacteres(bool value) {
-    _$isPasswordEightCharacteresAtom
-        .reportWrite(value, super.isPasswordEightCharacteres, () {
-      super.isPasswordEightCharacteres = value;
+  set isPasswordSevenCharacteres(bool value) {
+    _$isPasswordSevenCharacteresAtom
+        .reportWrite(value, super.isPasswordSevenCharacteres, () {
+      super.isPasswordSevenCharacteres = value;
     });
   }
 
@@ -126,7 +126,7 @@ mixin _$PasswordController on _PasswordStore, Store {
   String toString() {
     return '''
 password: ${password},
-isPasswordEightCharacteres: ${isPasswordEightCharacteres},
+isPasswordSevenCharacteres: ${isPasswordSevenCharacteres},
 hasPasswordNumber: ${hasPasswordNumber},
 hasPasswordLowcase: ${hasPasswordLowcase},
 hasPasswordUppercase: ${hasPasswordUppercase},

@@ -13,7 +13,7 @@ abstract class _PasswordStore with Store {
 
   //criterios
   @observable
-  bool isPasswordEightCharacteres = false;
+  bool isPasswordSevenCharacteres = false;
   @observable
   bool hasPasswordNumber = false;
   @observable
@@ -37,19 +37,19 @@ abstract class _PasswordStore with Store {
 
   @action
   void validatePassword(String value) {
-    eightCharacteres(value);
+    sevenCharacteres(value);
     passwordNumber(value);
     passwordLowcase(value);
     passwordUppercase(value);
     passwordSpecialCharacter(value);
   }
 
-  void eightCharacteres(String value) {
-    if (value.length >= 8) {
-      isPasswordEightCharacteres = true;
-      log(isPasswordEightCharacteres.toString());
+  void sevenCharacteres(String value) {
+    if (value.length >= 7) {
+      isPasswordSevenCharacteres = true;
+      log(isPasswordSevenCharacteres.toString());
     } else {
-      isPasswordEightCharacteres = false;
+      isPasswordSevenCharacteres = false;
     }
   }
 

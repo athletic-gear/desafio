@@ -35,7 +35,7 @@ class _ColumnCheckState extends State<ColumnCheck> {
         children: <Widget>[
           CheckValidator(
               text: 'Contém 8 caracteres',
-              status: controller.isPasswordEightCharacteres),
+              status: controller.isPasswordSevenCharacteres),
           const SizedBox(height: 10),
            CheckValidator(
               text: 'Contém letra maiúscula',
