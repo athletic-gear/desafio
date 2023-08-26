@@ -1,97 +1,65 @@
-# Requisitos
+<h1>Desafio da Athletic Gear</h1>
 
-**Utilizar qualquer linguagem de programação.**
+<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
+<h4 align="center"> 
+	🚧  Desafio da Athletic Gear 🚀 Concluído  🚧
+</h4> <!-- Status -->
 
-A ideia é validar a lógica e principalmente a forma como resolveu o problema.
+<h2 id="sumario">Tabela de conteúdos</h2>
+<ul>
+    <li><a href="#sobre">Descrição do Projetos</a></li>
+    <li><a href="#funcionalidade">Funcionalidades</a></li>
+    <li><a href="#linguagem">Linguagens e Ferramentas</a></li>
+    <li><a href="#started">Getting Started</a></li>
+</ul>
+<!-- final sumario -->
 
-Vamos querer ouvir como aprendeu, como descobriu e o porquê escolheu fazer assim no seu código.
+<h2 id='sobre'>💻 Sobre o Projeto</h2>
 
-Não é necessário conhecer todos recursos para resolver o desafio, a proposta é "correr atrás" para aprender e então resolver.
+<p>
+ Aplicativo que verifica se e mostra em tela se a senha a ser verificada é forte.
+ Para uma senha ser forte, ela deve ter:
 
-Sugerimos procurar no Google, Stack Overflow, YouTube, grupos técnicos, amigos, colegas de sala, professor, o que preferir -- _lembra de contar pra gente depois hein!_
+<li>no mínimo 7 caracteres</li>
+<li>pelo menos uma letra maiúscula</li>
+<li>pelo menos uma letra minúscula</li>
+<li>pelo menos um caracter especial</li> 
+</p>
+<!--final sobre -->
 
-Não tem prazo específico para terminar, quando acabar nos envie.
+<h2 id='funcionalidade'>⚙️ Funcionalidades</h2>
 
-Lembre-se que esse prazo também será levado em consideração, não fique com pressa para terminar rápido se estiver errado ou incompleto, só que também não gaste _um ano_ para terminar 😉
+- [X] Verificar se a senha tem 7 caracteres;
+- [X] Verificar se a senha tem uma letra maiúscula;
+- [X] Verificar se a senha tem alguma letra minúscula;
+- [x] Verificar se a senha tem algum 
+- [x] Verificar se a senha tem algum 
+- [X] Mostra o resultado na tela.
 
----
+<!-- final funcionalidades -->
+<h2 id='linguagem'>🛠 Linguagens e Ferramentas</h2>
 
-## Problema a ser resolvido
+<p>
+As seguintes ferramentas foram usadas na construção do projeto:
+</p>
+<ul>
+  <li><img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white">
+  </li>
+  <li><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"></li>
+  <li>Bloc</li>
+</ul>
 
-Considerando um array de senhas em string, que pode ser uma constante no código, imprimir na tela somente as que forem senhas fortes.
+<h2 id='started'>🚀 Getting Started</h2>
 
-Para uma senha ser forte, ela deve ter:
+Para clonar e rodar essa aplicação, você precisa do [Git](https://git-scm.com) and [Flutter](https://docs.flutter.dev/get-started/install) instalados no seu computador. Digite os seguites comandos:
 
-- no mínimo 7 caracteres
-- pelo menos uma letra maiúscula
-- pelo menos uma letra minúscula
-- \+ _E se for tranquilo para você, verifica também se tem um caracter especial (dentro dos que você preferir!) 🙂_
+    - Baixe ou clone este repositório usando o link abaixo:
+    $ git clone https://github.com/AdrianaBispo/calculator.git
+    
+    - Vá para a raiz do projeto e execute o seguinte comando no console para obter as dependências necessárias:
+    $ flutter pub get
 
----
+Essa aplicação tem suporte as plataformas windows, iOS e android.
 
-### Extra / Bônus
 
-Você ganhará pontos extras se utilizar um repositório Git e enviar sua solução no [GitHub](https://github.com/).
 
-_(melhor ainda se fizer um fork desse 🤩)_.
-
-Se você não conhecer o [Git](https://www.google.com/search?q=git), não tem problema nenhum. Pode aprender e nos contar como aprendeu!
-
-Não precisa virar um especialista, apenas o básico! Só que iremos querer saber como você aprendeu
-
-Queremos avaliar sua capacidade de aprender e de buscar ajuda.
-
-Tem muito material pronto e gratuito sobre Git e GitHub, use a internet a seu favor.
-
-De qualquer maneira, isso será útil para toda sua vida enquanto profissional de TI! 👍
-
----
-
-#### Exemplo
-
-Considerando um array com as strings:
-
-- #forTe1
-- senhafraca
-- Qu@s1
-- Voce@Consegue!2023
-
-Será impresso na tela apenas duas linhas:
-
----
-\#forTe1
-
-Voce@Consegue!2023
-
----
-
-Já que são as únicas que atendem os requisitos para uma senha forte.
-
-- **#forTe1**
-  - ✅ >= 7 caracteres (7)
-  - ✅ Tem letra maiúscula (T)
-  - ✅ Tem letra minúscula (fore)
-  - ✅ Tem número (1)
-  - ✅ _E tem caracter especial, caso você consiga validar (#)_
-
-- senhafraca
-
-  - ✅ >= 7 caracteres (10)
-  - ❌ Tem letra maiúscula
-  - ✅ Tem letra minúscula (senhafraca)
-  - ❌ Tem número
-
-- Qu@s1
-
-  - ❌ >= 7 caracteres (5)
-  - ✅ Tem letra maiúscula (Q)
-  - ✅ Tem letra minúscula (us)
-  - ✅ Tem número (1)
-  - ✅ _E tem caracter especial, caso você consiga validar (@)_
-
-- **Voce@Consegue!2023**
-  - ✅ >= 7 caracteres (18)
-  - ✅ Tem letra maiúscula (VC)
-  - ✅ Tem letra minúscula (oceonsegue)
-  - ✅ Tem número (2023)
-  - ✅ _E tem caracter especial, caso você consiga validar (@!)_
